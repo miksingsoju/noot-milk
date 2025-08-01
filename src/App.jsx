@@ -10,11 +10,19 @@ function App() {
 
   return (
     <>
-      <Title />
-      <div className='justify-center items-center'>
-        <Label text='Your QPI' color='pink' />
-
+      <div className="w-full h-screen flex flex-col  items-center bg-gray-100">
+        <nav> <NavBar/></nav>
+        <main>
+          <Title/>
+          
+          <div className='justify-center items-center'>
+            <Label text='Your QPI: ' color='pink' />  
+          </div>
+        </main>
       </div>
+      
+     
+      
 
       
     </>
@@ -29,13 +37,26 @@ function Label({text, color}){
   )
 }
 
+function NavBar() {
+  return(
+  <>
+    <nav className="w-full bg-pink flex flex-row rounded-lg ">
+      <p>Noot & Milk's</p>
+      <ul>
+        <li>QPI Calculator</li>
+        <li>DayDream Calculator</li>
+        <li></li>
+      </ul>
+    </nav>
+  </>)
+}
 function Title(){
   return(
   <>
       <div className='flex flex-col justify-center items-center mb-10'>
         <img className='max-w-[5rem] aspect-square object-contain' src={noot}/>
         <h1 className='text-center'>noot & milk's</h1>
-        <div className='bg-pink text-white rounded-lg w-full'>QPI Calculator</div>
+        <div className='bg-pink text-white rounded-lg w-full p-3'>QPI Calculator</div>
       </div>
       
   </>)
