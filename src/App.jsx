@@ -21,11 +21,6 @@ function App() {
       <section className='flex flex-row'>
         <ProjectCard name='QPI Calculator' img={Calculator}/>
         <ProjectCard name='Day Dreaming' img={Checklist}/>
-        
-        
-        
-
-
 
       </section>
       
@@ -45,7 +40,7 @@ function Title(){
   return(
   <>
       <div className='flex flex-col justify-center items-center mb-10'>
-        <h1 className='text-center'>noot & milk's</h1>
+        <h1 className='text-center pb-3'>noot & milk's</h1>
         <div className='bg-pink text-white rounded-lg w-1/3 p-2 mb-5'>one-stop calculator</div>
         <img className='w-m aspect-square object-contain mb-5' src={Noot}/>
 
