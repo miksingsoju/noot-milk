@@ -22,6 +22,8 @@ function App() {
         <ProjectCard name='QPI Calculator' img={Calculator}/>
         <ProjectCard name='Day Dreaming' img={Checklist}/>
         
+        
+        
 
 
 
