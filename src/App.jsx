@@ -11,19 +11,14 @@ function App() {
   return (
     <>
       <Title />
-      <div className='justify-center items-center'>
-        <Label text='Your QPI' color='pink' />
-
-      </div>
-
       
     </>
   )
 }
 // this returns a label with rounded edges and background color
-function Label({text, color}){
+function Label({text, bg}){
   return (
-    <div className={`text-white bg-${color} rounded-lg px-4 py-2 inline-block`}>
+    <div className={`text-white bg-${bg} rounded-lg px-4 py-2 inline-block`}>
       {text}
     </div>
   )
@@ -35,31 +30,10 @@ function Title(){
       <div className='flex flex-col justify-center items-center mb-10'>
         <img className='max-w-[5rem] aspect-square object-contain' src={noot}/>
         <h1 className='text-center'>noot & milk's</h1>
-        <div className='bg-pink text-white rounded-lg w-full'>QPI Calculator</div>
+        <div className='bg-pink text-white rounded-lg w-full'>one-stop calculator</div>
       </div>
       
   </>)
-}
-
-function Courses(){
-  return(
-  <>
-  </>
-  )
-}
-
-function YourQPI(){
-  return(
-    <>
-    </>
-  )
-}
-
-function CumulativeQPI(){
-  return(
-  <>
-  </>
-  )
 }
 
 export default App

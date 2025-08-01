@@ -5,29 +5,13 @@ import './App.css'
 
 import noot from './assets/nootnoot_photo.png'
 
-function Calculator() {
+function Home() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <Title />
-      <div className='justify-center items-center'>
-        <Label text='Your QPI' bg='pink' />
-        <Label text='Your QPI' bg='pink' />
-
-
-      </div>
-
-      
     </>
-  )
-}
-// this returns a label with rounded edges and background color
-function Label({text, bg}){
-  return (
-    <div className={`text-white bg-${bg} rounded-lg px-4 py-2 inline-block`}>
-      {text}
-    </div>
   )
 }
 
@@ -43,25 +27,4 @@ function Title(){
   </>)
 }
 
-function Courses(){
-  return(
-  <>
-  </>
-  )
-}
-
-function YourQPI(){
-  return(
-    <>
-    </>
-  )
-}
-
-function CumulativeQPI(){
-  return(
-  <>
-  </>
-  )
-}
-
-export default App
+export default Home
