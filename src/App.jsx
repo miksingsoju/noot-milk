@@ -3,27 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import Noot from './assets/nootnoot_photo.png'
-import Calculator from './assets/Calculator.png'
-import Checklist from './assets/Checklist.png'
+import noot from './assets/nootnoot_photo.png'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <section>
+      <body className="flex flex-col items-center">
+        <NavBar />
         <Title />
-      </section>
-      <hr className='mb-5'/>
-
-      Our Projects
-      <section className='flex flex-row'>
-        <ProjectCard name='QPI Calculator' img={Calculator}/>
-        <ProjectCard name='Day Dreaming' img={Checklist}/>
-
-
-      </section>
+        
+      </body>
+      
       
     </>
   )
@@ -37,30 +29,26 @@ function Label({text, bg}){
   )
 }
 
+function NavBar(){
+  return(
+    <nav className="w-full sticky top-0 z-50 bg-white shadow-sm shadow-fuchsia-300 flex justify-center items-center p-4">
+      <h1 className="text-lg sm:text-xl; md:text-2xl font-bold text-center">
+        NOOT & MILK'S
+      </h1>
+    </nav>
+  )
+}
+
 function Title(){
   return(
   <>
       <div className='flex flex-col justify-center items-center mb-10'>
+        <img className='max-w-[5rem] aspect-square object-contain' src={noot}/>
         <h1 className='text-center'>noot & milk's</h1>
-        <div className='bg-pink text-white rounded-lg w-full mb-5'>one-stop calculator</div>
-        <img className='w-m aspect-square object-contain mb-5' src={Noot}/>
-
-        a website for calculating miks <br /> 
-        and amiel's dream life.
+        <div className='bg-pink text-white rounded-lg w-full'>one-stop calculator</div>
       </div>
       
   </>)
-}
-
-function ProjectCard({name, img}){
-  return(
-    <>
-      <div className='pb-5 w-50 mx-5 mt-5 border-5 border-nootblue rounded-lg aspect-square justify-center items-center'>
-        <img className='mx-auto items-center aspect-square object-contain' src={img} />
-        {name}
-      </div>
-    </>
-  )
 }
 
 export default App
