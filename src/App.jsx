@@ -18,8 +18,13 @@ function App() {
       <hr className='mb-5'/>
 
       Our Projects
-      <section className='flex flex-row'>
+      <section className='flex flex-row justify-center flex-wrap'>
         <ProjectCard name='QPI Calculator' img={Calculator}/>
+        <ProjectCard name='Day Dreaming' img={Checklist}/>
+        <ProjectCard name='Day Dreaming' img={Checklist}/>
+        <ProjectCard name='Day Dreaming' img={Checklist}/>
+        <ProjectCard name='Day Dreaming' img={Checklist}/>
+        <ProjectCard name='Day Dreaming' img={Checklist}/>
         <ProjectCard name='Day Dreaming' img={Checklist}/>
 
       </section>
