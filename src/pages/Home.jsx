@@ -17,7 +17,7 @@ function Home() {
         a website for calculating miks <br /> 
         and amiel's dream life.
       </section>
-      <hr className='mb-5'/>
+      <hr className='my-5'/>
 
       Our Projects
       <section className='flex flex-row justify-center flex-wrap'>

@@ -25,14 +25,25 @@ function Calculator() {
 }
 
 function Courses(){
+  const [courses, setCourses] = useState([{}]) // State to track course list
+
+  const addCourse = () => {
+    setCourses([...courses, {}]) // Add a new empty course to the array
+  }
+
+  // Optional: for clearing all and resetting to 1 course
+  const resetCourses = () => {
+    setCourses([{}])
+  }
+
   return(
   <>
   <div className='py-5 justify-center w-3/5 mx-10 border-5 border-blue-300'>
 
   <div className='mx-10 gap-5 flex flex-row'>
-    <button className='gap-2 flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'>
+    <button onClick={addCourse} className='gap-2 flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'>
     <img src={Add} /> Add Course </button> 
-    <button className='bg-blue-300 hover:bg-blue-500 text-white px-7 py-2'> Reset </button>  
+    <button onClick={resetCourses} className='bg-blue-300 hover:bg-blue-500 text-white px-7 py-2'> Reset </button>  
 
   </div>
    
@@ -43,22 +54,22 @@ function Courses(){
       <Label text='No. of Units' bg='blue-300' />
     </div>
 
-    <Course />
-    <Course />
-        <Course />
+    {courses.map((_, index) => (
+        <Course key={index} />
+      ))}
   </div>
   </>
   )
 }
 
 function Course(){
+  
   return (
     <>
       <div className='mx-10 my-5 flex flex-row gap-10'>
        <input name="courseCode" className='text-center py-1  border-2 border-green-400'/>
       <select name="gradePoint" className='text-center py-1 px-15 border-2 border-green-400'>
         <option value="0">-</option>
-
         <option value="4">A</option>
         <option value="3.5">B+</option>
         <option value="3">B</option>
