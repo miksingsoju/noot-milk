@@ -18,8 +18,13 @@ function App() {
       <hr className='mb-5'/>
 
       Our Projects
-      <section className='flex flex-row'>
+      <section className='flex flex-row justify-center flex-wrap'>
         <ProjectCard name='QPI Calculator' img={Calculator}/>
+        <ProjectCard name='Day Dreaming' img={Checklist}/>
+        <ProjectCard name='Day Dreaming' img={Checklist}/>
+        <ProjectCard name='Day Dreaming' img={Checklist}/>
+        <ProjectCard name='Day Dreaming' img={Checklist}/>
+        <ProjectCard name='Day Dreaming' img={Checklist}/>
         <ProjectCard name='Day Dreaming' img={Checklist}/>
 
       </section>
@@ -40,8 +45,8 @@ function Title(){
   return(
   <>
       <div className='flex flex-col justify-center items-center mb-10'>
-        <h1 className='text-center'>noot & milk's</h1>
-        <div className='bg-pink text-white rounded-lg w-1/3 mb-5'>one-stop calculator</div>
+        <h1 className='text-center pb-3'>noot & milk's</h1>
+        <div className='bg-pink text-white rounded-lg w-1/3 p-2 mb-5'>one-stop calculator</div>
         <img className='w-m aspect-square object-contain mb-5' src={Noot}/>
 
         a website for calculating miks <br /> 
