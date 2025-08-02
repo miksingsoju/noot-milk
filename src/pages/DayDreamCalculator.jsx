@@ -3,17 +3,15 @@ import { useState } from 'react'
 import Title from '../components/Title'
 import Label from '../components/Label'
 
-function Calculator() {
+function Daydream() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Title name="QPI Calculator" />
+      <Title name="Daydream Calculator" />
       <div className='justify-center items-center'>
         <Label text='Your QPI' bg='pink' />
-        <Label text='Your QPI' bg='pink' />
 
-      Hello
       </div>
 
 
@@ -21,25 +19,4 @@ function Calculator() {
   )
 }
 
-function Courses(){
-  return(
-  <>
-  </>
-  )
-}
-
-function YourQPI(){
-  return(
-    <>
-    </>
-  )
-}
-
-function CumulativeQPI(){
-  return(
-  <>
-  </>
-  )
-}
-
-export default Calculator
+export default Daydream
