@@ -30,9 +30,9 @@ function Courses(){
   <div className='py-5 justify-center w-3/5 mx-10 border-5 border-blue-300'>
 
   <div className='mx-10 gap-5 flex flex-row'>
-    <button className='gap-2 flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-3'>
+    <button className='gap-2 flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'>
     <img src={Add} /> Add Course </button> 
-    <button className='bg-blue-300 hover:bg-blue-500 text-white px-5 py-3'> Reset </button>  
+    <button className='bg-blue-300 hover:bg-blue-500 text-white px-7 py-2'> Reset </button>  
 
   </div>
    
@@ -42,6 +42,9 @@ function Courses(){
       <Label text='Letter Mark' bg='blue-300' />
       <Label text='No. of Units' bg='blue-300' />
     </div>
+
+
+
 
   </div>
   </>
@@ -67,19 +70,19 @@ function CumulativeQPI(){
 
     <div className='py-5 border-5 border-pink'>
       <Label text='Desired QPI' bg='pink' />
+              <h1> 4.00</h1>
+
     </div>
 
     <div className='py-5 border-5 border-pink'>
       <Label text='Minimum QPI' bg='pink' />
+              <h1> 4.00</h1>
+
     </div>
 
     <div className='py-5 border-5 border-pink'>
       <Label text='Units Left to Take' bg='pink' />
     </div>
-
-
-
-
   </>
   )
 }
