@@ -11,7 +11,8 @@ function Calculator() {
       <Title name="QPI Calculator" />
       <div className='justify-center items-center'>
         <Label text='Your QPI' bg='pink' />
-        <Label text='Your QPI' bg='pink' />
+        <Label text='Your QPI' bg='blue-300' />
+        
 
       Hello
       </div>
