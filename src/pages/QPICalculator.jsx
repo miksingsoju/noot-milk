@@ -43,11 +43,34 @@ function Courses(){
       <Label text='No. of Units' bg='blue-300' />
     </div>
 
-
-
-
+    <Course />
+    <Course />
+        <Course />
   </div>
   </>
+  )
+}
+
+function Course(){
+  return (
+    <>
+      <div className='mx-10 my-5 flex flex-row gap-10'>
+       <input name="courseCode" className='text-center py-1  border-2 border-green-400'/>
+      <select name="gradePoint" className='text-center py-1 px-15 border-2 border-green-400'>
+        <option value="0">-</option>
+
+        <option value="4">A</option>
+        <option value="3.5">B+</option>
+        <option value="3">B</option>
+        <option value="2.5">C+</option>
+        <option value="2">C</option>
+        <option value="1">D</option>
+        <option value="0">F</option>
+      </select>
+      <input name="units" className='text-center py-1 border-2 border-green-400'/>
+    </div>
+    
+    </>
   )
 }
 
