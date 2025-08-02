@@ -58,8 +58,8 @@ function Courses({ courses, setCourses }) {
   }
 
   return (
-    <div className='py-5 justify-center w-3/5 mx-10 border-5 border-blue-300'>
-      <div className='mx-10 gap-5 flex flex-row'>
+    <div className='w-fit  py-5 justify-center mx-10 border-5 rounded-xl border-blue-300'>
+      <div className='mx-10 gap-10 flex flex-row pb-5'>
         <button
           onClick={addCourse}
           className='gap-2 flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'
@@ -68,13 +68,13 @@ function Courses({ courses, setCourses }) {
         </button>
         <button
           onClick={resetCourses}
-          className='bg-blue-300 hover:bg-blue-500 text-white px-7 py-2'
+          className='gap-2 flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'
         >
           Reset
-        </button>
+        </button> 
       </div>
 
-      <div className='my-10 justify-center flex flex-row gap-10'>
+      <div className='mx-10 flex flex-row gap-10'>
         <Label text='Course Code' bg='blue-300' />
         <Label text='Letter Mark' bg='blue-300' />
         <Label text='No. of Units' bg='blue-300' />
