@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 import Title from '../components/Title'
 import Label from '../components/Label'
-
 import Add from '../assets/add_circle.svg'
 
 function Calculator() {
@@ -37,7 +36,7 @@ function Calculator() {
           <YourQPI qpi={computeQPI()} />
           <CumulativeQPI />
         </div>
-      </div>
+      </div>  
     </>
   )
 }
@@ -58,17 +57,17 @@ function Courses({ courses, setCourses }) {
   }
 
   return (
-    <div className='w-fit  py-5 justify-center mx-10 border-5 rounded-xl border-blue-300'>
+    <div className='w-fit py-5 justify-center mx-10 border-5 rounded-xl border-blue-300'>
       <div className='mx-10 gap-10 flex flex-row pb-5'>
         <button
           onClick={addCourse}
-          className='gap-2 flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'
+          className=' flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'
         >
           <img src={Add} /> Add Course
         </button>
         <button
           onClick={resetCourses}
-          className='gap-2 flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'
+          className=' flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'
         >
           Reset
         </button> 
@@ -94,16 +93,16 @@ function Courses({ courses, setCourses }) {
 
 function Course({ index, data, onChange }) {
   return (
-    <div className='mx-10 my-5 flex flex-row gap-10'>
+    <div className='mx-10 my-5 flex flex-row gap-8'>
       <input
         name="courseCode"
-        className='text-center py-1 border-2 border-green-400'
+        className='text-start py-1 border-2 border-green-400'
         value={data.courseCode}
         onChange={(e) => onChange(index, 'courseCode', e.target.value)}
       />
       <select
         name="gradePoint"
-        className='text-center py-1 px-15 border-2 border-green-400'
+        className='text-left py-1 px-15 border-2 border-green-400'
         value={data.gradePoint}
         onChange={(e) => onChange(index, 'gradePoint', e.target.value)}
       >
