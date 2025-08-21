@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import QPICalculator from './pages/QPICalculator'
 import DayDream from './pages/DayDreamCalculator'
-import './App.css'
 
 // import other pages as needed
 

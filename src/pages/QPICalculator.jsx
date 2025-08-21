@@ -4,6 +4,7 @@ import Title from '../components/Title'
 import Label from '../components/Label'
 import Add from '../assets/add_circle.svg'
 
+
 function Calculator() {
   const [courses, setCourses] = useState([
     { courseCode: '', gradePoint: '', units: '' }
@@ -28,15 +29,19 @@ function Calculator() {
 
   return (
     <>
+    <body className='max-w-screen mx-auto px-5 py-10'>
       <Title name="QPI Calculator" />
-      <div className='gap-5 flex flex-row'>
+      <div className='gap-5 flex flex-col md:flex-row'>
         <Courses courses={courses} setCourses={setCourses} />
 
         <div className='gap-5 flex flex-col flex-1'>
           <YourQPI qpi={computeQPI()} />
           <CumulativeQPI />
         </div>
-      </div>  
+      </div> 
+      
+    </body>
+       
     </>
   )
 }
@@ -57,26 +62,28 @@ function Courses({ courses, setCourses }) {
   }
 
   return (
-    <div className='w-fit py-5 justify-center mx-10 border-5 rounded-xl border-blue-300'>
-      <div className='mx-10 gap-10 flex flex-row pb-5'>
+    <div className='w-full py-5 mx-0 md:mx-10 border-5 border-xl border-blue-300 rounded-xl'>
+      
+      <div className='flex flex-col sm:flex-row gap-2 sm:gap-5 pb-5 mx-4 md:mx-10 '>
         <button
           onClick={addCourse}
-          className=' flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'
+          className='flex flex-row items-center justify-center bg-blue-300 hover:bg-blue-500 text-white px-5 py-4 w-full sm:w-auto rounded-lg'
         >
-          <img src={Add} /> Add Course
+          <img src={Add} className="mr-2" /> Add Course
         </button>
         <button
           onClick={resetCourses}
-          className=' flex flex-row bg-blue-300 hover:bg-blue-500 text-white px-5 py-2'
+          className='flex flex-row items-center justify-center bg-blue-300 hover:bg-blue-500 text-white px-5 py-4 w-full sm:w-auto rounded-lg'
         >
           Reset
         </button> 
       </div>
 
-      <div className='mx-10 flex flex-row gap-10'>
-        <Label text='Course Code' bg='blue-300' />
-        <Label text='Letter Mark' bg='blue-300' />
-        <Label text='No. of Units' bg='blue-300' />
+      {/* Labels: Uses flex-1 to distribute space and shortens text for mobile */}
+      <div className='mx-4 md:mx-10 flex flex-row  gap-2 md:gap-10 text-sm md:text-base font-bold text-center'>
+        <Label text='Class Code' bg='blue-300' className='flex-1 hidden sm:block' />
+        <Label text='Grade' bg='blue-300' className='flex-1' />
+        <Label text='Units' bg='blue-300' className='flex-1' />
       </div>
 
       {courses.map((course, index) => (
@@ -93,7 +100,7 @@ function Courses({ courses, setCourses }) {
 
 function Course({ index, data, onChange }) {
   return (
-    <div className='mx-10 my-5 flex flex-row gap-8'>
+    <div className='mx-10 my-5 flex flex-row flex-wrap gap-8  '>
       <input
         name="courseCode"
         className='text-start py-1 border-2 border-green-400'
